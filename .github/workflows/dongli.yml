@@ -2,8 +2,7 @@ name: 生成东篱 dongli.json解密全 密文和网页和接口 生成新Jar配
 
 on:
   schedule:
-    - cron: '0 */3 * * *'   
-    - cron: '0 0 * * *' # 每天早上 8:00 自动运行
+    - cron: '0 */4 * * *'   
   workflow_dispatch:     # 支持手动点击按钮运行
 
 jobs:
@@ -31,7 +30,7 @@ jobs:
          cd tool/
          #python decrypt_cpu.py
           #python tvbox.py https://raw.githubusercontent.com/IY-CPU/IY/main/%E5%A4%A9%E7%A5%9EIY.png cpu_config.json dec        
-          #http://itv666.cc/aowu/config.webp   http://我不是.摸鱼儿.cc  https://raw.githubusercontent.com/rrzt/jiemi/main/mw.json  https://raw.githubusercontent.com/IY-CPU/IY/main/%E5%A4%A9%E7%A5%9EIY.png
+          #http://itv666.cc/aowu/config.webp   http://我不是.摸鱼儿.cc  https://raw.githubusercontent.com/yffs118/tvjiemi/main/mw.json  https://raw.githubusercontent.com/IY-CPU/IY/main/%E5%A4%A9%E7%A5%9EIY.png
           python tvbox.py https://raw.githubusercontent.com/chitue/dongliTV/main/api.json cpu_config.json dec
           
     # - name: 1.1 执行 第二类解密函数，按需修改/tool目录中decrypt_cpu.py
@@ -63,7 +62,7 @@ jobs:
     #     curl -X POST "http://2015888.xyz/jiemi/get_jiemi.php" \
     #       -H "Content-Type: application/x-www-form-urlencoded" \
     #       -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" \
-    #       -d "url=https://raw.githubusercontent.com/rrzt/jiemi/main/cpuiy_config.json" \
+    #       -d "url=https://raw.githubusercontent.com/yffs118/tvjiemi/main/cpuiy_config.json" \
     #       -o cpu_config.json 
     #     fi
     - name: 2. 执行 Spider 实时检测与下载
@@ -111,8 +110,8 @@ jobs:
         
         # 你的 GitHub 仓库对应的 dongli.jar 纯净链接（不带 MD5）
         # 【请注意】：请把下面两行的“你的GitHub用户名”和“你的仓库名”修改为你实际的名称
-        GITHUB_USER = "rrzt"
-        GITHUB_REPO = "jiemi"
+        GITHUB_USER = "yffs118"
+        GITHUB_REPO = "tvjiemi"
         #按需修改JAR 名称
         BASE_JAR_URL = f"https://gh-proxy.org/https://raw.githubusercontent.com/{GITHUB_USER}/{GITHUB_REPO}/main/dongli.jar"
   
