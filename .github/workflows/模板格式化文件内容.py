@@ -1,4 +1,4 @@
-name: 模板解密全图片 生成新Jar配置 修改（批量cpu.json、  cpu.jar，逐条 “修改” ）
+name: 模板解密系统格式化书写json文件（批量cpu.json、  cpu.jar，逐条 “修改” ）
 
 on:
   schedule:
